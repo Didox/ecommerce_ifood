@@ -1,4 +1,4 @@
-package br.com.isidrocorp.ecommerce.security;
+package br.com.isidrocorp.ecommerce.security.spring;
 
 import java.io.IOException;
 
