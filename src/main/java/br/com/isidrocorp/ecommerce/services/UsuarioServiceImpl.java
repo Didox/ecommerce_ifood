@@ -34,9 +34,14 @@ public class UsuarioServiceImpl implements IUsuarioService {
 				System.out.println("Senha login = " + senhaLogin);
 				System.out.println("Senha user  = " + user.getSenha());
 
-				if (senhaLogin.equals(user.getSenha())) {
-					return new Token(TokenUtil.createToken(user));
-				}
+				// com cripto de senha
+				// if (senhaLogin.equals(user.getSenha())) {
+				// 	return new Token(TokenUtil.createToken(user));
+				// }
+
+				// sem cripto de senha
+				return new Token(TokenUtil.createToken(user));
+
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();

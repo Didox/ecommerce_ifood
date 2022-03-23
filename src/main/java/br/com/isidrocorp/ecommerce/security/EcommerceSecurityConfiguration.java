@@ -25,13 +25,13 @@ public class EcommerceSecurityConfiguration extends WebSecurityConfigurerAdapter
 					  .and()
 					  .authorizeRequests() 
 					  // quais são as requisições que eu quero permitir
-					  .antMatchers(HttpMethod.GET, "/produtos").permitAll()
-					  .antMatchers(HttpMethod.GET, "/produtos/*").permitAll()
+					  // .antMatchers(HttpMethod.GET, "/produtos").permitAll()
+					  // .antMatchers(HttpMethod.GET, "/produtos/*").permitAll()
 					  .antMatchers(HttpMethod.POST, "/login").permitAll()
-					  .antMatchers(HttpMethod.GET,"/usuarios").permitAll()
-					  .antMatchers(HttpMethod.GET,"/usuarios/*").permitAll()
-					  .antMatchers(HttpMethod.POST, "/usuarios*").permitAll()
-					  .antMatchers(HttpMethod.PUT, "/usuarios/*").permitAll()
+					  // .antMatchers(HttpMethod.GET,"/usuarios").permitAll()
+					  // .antMatchers(HttpMethod.GET,"/usuarios/*").permitAll()
+					  // .antMatchers(HttpMethod.POST, "/usuarios*").permitAll()
+					  // .antMatchers(HttpMethod.PUT, "/usuarios/*").permitAll()
 					  
 					  // qualquer outra requisição que "foge" aos padrões especificados, precisa ser autenticada
 					  .anyRequest().authenticated().and().cors();

@@ -56,6 +56,7 @@ public class TokenUtil {
 	}
 	
 	public static Authentication validate(HttpServletRequest request) {
+
 		// extrair o token do cabeçalho
 		String token = request.getHeader(HEADER);
 		token = token.replace(PREFIX, ""); // removi o prefixo "Bearer " do token
